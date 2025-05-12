@@ -1,0 +1,13 @@
+# Entornos virtuales
+venv/
+.venv/
+
+# Checkpoints de notebooks
+.ipynb_checkpoints/
+
+# Archivos temporales
+__pycache__/
+.DS_Store
+
+# Datos sensibles o innecesarios
+
