@@ -1,0 +1,101 @@
+Churn Prediction - Examen Final de Minería de Datos
+
+Este proyecto implementa un modelo predictivo de abandono de clientes (`churn`) para la empresa ficticia **Interconnect**. Aplicando la metodología **CRISP-DM**, se desarrolló una solución robusta y explicable, validada con múltiples métricas, visualizaciones y análisis técnico profundo.
+
+---
+
+## 📁 Estructura del proyecto
+
+Examen_Final/
+│
+├── data/
+│ ├── raw/ # Datos CSV originales (no se suben)
+│ └── clean/ # Dataset limpio y procesado
+│
+├── notebooks/
+│ └── salgado_mateo_churn.ipynb
+│
+├── src/
+│ └── utils.py # Funciones para carga, merge y guardado
+│
+├── models/
+│ └── xgb_final_model.joblib
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+
+
+
+---
+
+## 🚀 ¿Cómo correr el proyecto?
+
+### 🔧 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/tu_usuario/examen_final_churn.git
+cd examen_final_churn
+🐍 2. Crear entorno virtual (opcional pero recomendado)
+bash
+Copiar
+Editar
+python -m venv venv
+source venv/bin/activate      # Linux/macOS
+venv\Scripts\activate         # Windows
+📦 3. Instalar requerimientos
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+ 4. Ejecutar notebook
+Abre el archivo:
+
+
+notebooks/salgado_mateo_churn.ipynb
+Ejecuta todo el notebook (Restart & Run All) desde Jupyter o VSCode.
+
+🎯 Resultados del modelo final (XGBoost)
+AUC ROC (test): 0.9966
+
+F1-score (test): 0.9791
+
+No hay overfitting ni data leakage
+
+Validado con matriz de confusión, SHAP, curva ROC y balance de predicciones
+
+📊 Interpretabilidad y decisiones
+SHAP revela que tenure_months, TotalCharges y MonthlyCharges son claves.
+
+El modelo fue implementado para recomendar campañas de retención personalizadas.
+
+Se propone monitoreo de deriva y actualización periódica.
+
+✅ Proyecto 100% reproducible
+Semillas aleatorias fijas (random_state=42)
+
+Control de versión con Git
+
+Validación cruzada con cv=5
+
+📬 Contacto
+Mateo Salgado
+Universidad San Francisco de Quito
+
+
+---
+
+## ✅ `requirements.txt`
+
+Ubícalo en:
+`C:\Users\pmate\OneDrive - Universidad San Francisco de Quito\8 SEMESTRE\DataMining\Examanes\Examen_Final\requirements.txt`
+
+```txt
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+shap
+joblib
